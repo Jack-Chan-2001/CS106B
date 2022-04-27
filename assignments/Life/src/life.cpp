@@ -21,8 +21,10 @@ void welcome_messages(void);
 void input_file(string &filename, ifstream &fin);
 void display_grid(Grid<string>& grid);
 bool wrap_switch(string& wrapping);
-void update_grid(Grid<string>& grid, const bool wrapping);
+void menu_option(Grid<string>& grid,const bool wrapping, string& option, LifeGUI& gui);
+void update_grid(Grid<string>& grid, const bool wrapping, LifeGUI& gui);
 int count_neighbors(Grid<string>& grid, int row, int col, const bool wrapping);
+
 
 int main() {
     welcome_messages();
@@ -53,36 +55,14 @@ int main() {
     // initial window
     display_grid(grid);
 
+    // gui
+    LifeGUI gui;
+    gui.resize(grid.nRows, grid.nCols);
+
     // menu option
     string option;
-    do
-    {
-        option = getLine("a)nimate, t)ick, q)uit?");
-        if (equalsIgnoreCase(option, string("a"))) {
-            string frames;
-            do
-            {
-                frames = getLine("How many frames?");
-                if (!stringIsInteger(frames)) {
-                    cout << "Illegal integer format. Try again.\n";
-                }
-            } while (!stringIsInteger(frames));
-            for (int i = 0; i < stringToInteger(frames); i++)
-            {
-                clearConsole();
-                update_grid(grid, wrapping);
-                display_grid(grid);
-                pause(50);
-            }
-        }
-        if (equalsIgnoreCase(option, string("t"))) {
-            update_grid(grid, wrapping);
-            display_grid(grid);
-        }
-        if (!equalsIgnoreCase(option, string("q")) && !equalsIgnoreCase(option, string("t")) && !equalsIgnoreCase(option, string("a"))) {
-            cout << "Invalid choice; please try again.\n";
-        }
-    } while (!equalsIgnoreCase(option, string("q")));
+    menu_option(grid,wrapping,option, gui);
+
 
     cout << "Have a nice Life!";
     return 0;
@@ -145,8 +125,41 @@ bool wrap_switch(string& wrap)
     return is_wrapping;
 }
 
+void menu_option(Grid<string>& grid,const bool wrapping, string& option, LifeGUI& gui)
+{
+    do
+    {
+        option = getLine("a)nimate, t)ick, q)uit?");
+        if (equalsIgnoreCase(option, string("a"))) {
+            string frames;
+            do
+            {
+                frames = getLine("How many frames?");
+                if (!stringIsInteger(frames)) {
+                    cout << "Illegal integer format. Try again.\n";
+                }
+            } while (!stringIsInteger(frames));
+            for (int i = 0; i < stringToInteger(frames); i++)
+            {
+                clearConsole();
+                update_grid(grid, wrapping, gui);
+                display_grid(grid);
+                pause(50);
+            }
+        }
+        if (equalsIgnoreCase(option, string("t"))) {
+            update_grid(grid, wrapping, gui);
+            display_grid(grid);
+        }
+        if (!equalsIgnoreCase(option, string("q")) && !equalsIgnoreCase(option, string("t")) && !equalsIgnoreCase(option, string("a"))) {
+            cout << "Invalid choice; please try again.\n";
+        }
+    } while (!equalsIgnoreCase(option, string("q")));
+}
+
+
 // advance grid from one generation to the next
-void update_grid(Grid<string>& grid, const bool wrapping)
+void update_grid(Grid<string>& grid, const bool wrapping, LifeGUI& gui)
 {
     Grid<string> grid_n = grid;
     int neighbors;
@@ -158,18 +171,27 @@ void update_grid(Grid<string>& grid, const bool wrapping)
             case 0:
             case 1:
                 grid_n[row][col] = string("-");
+                gui.drawCell(row, col, false);
                 break;
             case 2:
                 grid_n[row][col] = grid[row][col];
+                if (grid_n[row][col].compare(string("-")) == 0) {
+                    gui.drawCell(row, col, false);
+                } else {
+                    gui.drawCell(row, col, true);
+                }
                 break;
             case 3:
                 grid_n[row][col] = string("X");
+                gui.drawCell(row, col, true);
                 break;
             case 4:
                 grid_n[row][col] = string("-");
+                gui.drawCell(row, col, false);
                 break;
             default:
                 grid_n[row][col] = string("-");
+                gui.drawCell(row, col, false);
                 break;
             }
         }
