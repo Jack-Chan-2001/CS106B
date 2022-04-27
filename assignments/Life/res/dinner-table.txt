@@ -1,0 +1,22 @@
+15
+15
+---------------
+--X------------
+--XXX-------XX-
+-----X------X--
+----XX----X-X--
+----------XX---
+---------------
+------XXX------
+------XXX------
+---XX----------
+--X-X----XX----
+--X------X-----
+-XX-------XXX--
+------------X--
+---------------
+
+# by Robert Wainwright.
+# A spiderly looking creation with a
+# spinner in the middle that cycles
+# every 12 generations.

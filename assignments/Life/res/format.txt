@@ -1,0 +1,15 @@
+5
+9
+---------
+---------
+---XXX---
+---------
+---------
+-x-x-x-x-
+abcdefghi
+!!!!!!!!!
+# stepp
+# This is a very simple input file, but it's a good test of the input format
+# because your code should ignore anything below the 5 lines specified.
+# (The line of -x-x- should be ignored, and the abcd line, etc., and your
+# program should be able to process this file without bugs or crashing.)

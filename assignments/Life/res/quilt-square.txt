@@ -1,0 +1,25 @@
+20
+20
+--------------------
+-----XX------XX-----
+----X--X----X--X----
+----X-X-X--X-X-X----
+--XX--X-XXXX-X--XX--
+-X-----X----X-----X-
+-X-XX----------XX-X-
+--X--X--------X--X--
+---XX----------XX---
+----X----------X----
+----X----------X----
+---XX----------XX---
+--X--X--------X--X--
+-X-XX----------XX-X-
+-X-----X----X-----X-
+--XX--X-XXXX-X--XX--
+----X-X-X--X-X-X----
+----X--X----X--X----
+-----XX------XX-----
+--------------------
+
+# From Computer Magaazine 2001, Eric Weisstein
+# Flower-like pattern that cycles endlessly.

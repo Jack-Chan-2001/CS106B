@@ -1,0 +1,29 @@
+19
+27
+---------------------------
+---------------------------
+---------------------------
+---XX-----------------XX---
+---XX--------X--------XX---
+------------X-X------------
+----------X-----X----------
+------X-X---XXX---X-X------
+-------X-X---X---X-X-------
+-------X-X---X---X-X-------
+-------X-X---X---X-X-------
+------X-X---XXX---X-X------
+----------X-----X----------
+------------X-X------------
+---XX--------X--------XX---
+---XX-----------------XX---
+---------------------------
+---------------------------
+---------------------------
+
+# jzelenski
+# I just made this one up. If you start 
+# with symmetric colonies, you tend to
+# get interesting kaleidoscopic effects.
+# This one evolves to a repetitive colony
+# after a burst of energy out of the
+# starting gate. 

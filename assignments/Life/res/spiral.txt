@@ -1,0 +1,23 @@
+15
+20
+--------------------
+--------------------
+----------XX--------
+-----------X--------
+------XXX--XX-------
+----XXX-X---X-------
+----X----X-XX-------
+--------X-X---------
+------XX-X----X-----
+------X---X-XXX-----
+------XX--XXX-------
+-------X------------
+-------XX-----------
+--------------------
+--------------------
+
+# jzelenski
+# This nifty colony infinitely repeats in
+# a cycle of about 10 different symmetric
+# patterns that each resemble some sort of
+# spiral.
