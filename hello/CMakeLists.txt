@@ -20,7 +20,7 @@ file(GLOB stanford_files
         )
 add_library(stanford ${stanford_files})
 
-set(hello_SOURCES src/hello.cpp)
+set(hello_SOURCES src/main.cpp)
 link_libraries(stanford)
 add_executable(hello ${hello_SOURCES})
 
