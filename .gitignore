@@ -37,7 +37,6 @@ _deps
 *.zip
 .DS_Store
 
-hello/Makefile
-hello/hello
 BlankProject/
 CS106/
+hello/
