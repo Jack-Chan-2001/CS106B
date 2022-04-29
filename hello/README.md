@@ -1,0 +1,1 @@
+It is Stanford cpp library empty project, using cmake as build toolchain.
