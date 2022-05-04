@@ -1,0 +1,16 @@
+This is a short input file composed of spaces and of letters.
+It is also a file with end of line characters to help you to test
+your code and help you get started.
+Isn't this the best assignment for you to solve?
+Also, test your might, Mortal Kombat!
+I'm    	
+
+		  not		   
+
+
+so
+
+
+
+sure.
+
