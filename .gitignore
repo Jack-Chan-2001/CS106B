@@ -27,12 +27,7 @@ CTestTestfile.cmake
 _deps
 
 # visual sdudio
-*/.vscode/*
-# !.vscode/settings.json
-# !.vscode/tasks.json
-# !.vscode/launch.json
-# !.vscode/extensions.json
-# *.code-workspace
+**/.vscode
 
 *.zip
 .DS_Store
@@ -41,3 +36,6 @@ BlankProject/
 CS106/
 hello/
 **/StanfordCPPLib
+
+Ngrams/
+!/Ngrams/src/*
