@@ -37,5 +37,5 @@ CS106/
 hello/
 **/StanfordCPPLib
 
-Ngrams/
-!/Ngrams/src/*
+assignments/
+!assignments/**/src/

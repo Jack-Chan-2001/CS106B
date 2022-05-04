@@ -1,0 +1,4 @@
+/home/jack/Documents/courses/cs106B/assignments/02_Serafini/WordLadder/CMakeFiles/stanford.dir
+/home/jack/Documents/courses/cs106B/assignments/02_Serafini/WordLadder/CMakeFiles/wordladder.dir
+/home/jack/Documents/courses/cs106B/assignments/02_Serafini/WordLadder/CMakeFiles/edit_cache.dir
+/home/jack/Documents/courses/cs106B/assignments/02_Serafini/WordLadder/CMakeFiles/rebuild_cache.dir
