@@ -1,1 +1,0 @@
-/usr/bin/c++  -ldl -lpthread CMakeFiles/wordladder.dir/src/wordladder.cpp.o -o wordladder  libstanford.a -lpthread -ldl 
