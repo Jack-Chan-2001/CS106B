@@ -20,8 +20,8 @@ This is [Stanford cpp library empty project](https://github.com/Jack-Chan-2001/C
 
 ## Reference
 
-https://github.com/a2677331/CS106B-HW-Solutions
+[https://github.com/a2677331/CS106B-HW-Solutions](https://github.com/a2677331/CS106B-HW-Solutions)
 
-https://github.com/efeacer/Stanford_CS106B_Assignments
+[https://github.com/efeacer/Stanford_CS106B_Assignments](https://github.com/efeacer/Stanford_CS106B_Assignments)
 
-https://github.com/EHaarer/StanfordSummerCppWorkELDH
+[https://github.com/EHaarer/StanfordSummerCppWorkELDH](https://github.com/EHaarer/StanfordSummerCppWorkELDH)
