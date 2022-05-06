@@ -40,3 +40,4 @@ StanfordCPPLib/
 assignments/
 !assignments/**/src/
 !assignments/**/res/
+!assignments/**/lib/

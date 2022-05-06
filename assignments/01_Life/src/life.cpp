@@ -40,9 +40,9 @@ int main() {
     getline(fin, col);
     Grid<string> grid(stringToInteger(row), stringToInteger(col));
     string line;
-    for (int j = 0; j < grid.nRows; j++) {
+    for (int j = 0; j < grid.numRows(); j++) {
         getline(fin, line);
-        for (int k = 0; k < grid.nCols; k++) {
+        for (int k = 0; k < grid.numCols(); k++) {
             grid[j][k] = line[k];
         }
     }
@@ -57,7 +57,7 @@ int main() {
 
     // gui
     LifeGUI gui;
-    gui.resize(grid.nRows, grid.nCols);
+    gui.resize(grid.numRows(), grid.numCols());
 
     // menu option
     string option;
@@ -99,8 +99,8 @@ void input_file(string &filename, ifstream &fin)
 // print the current state of the frid, without modifying that state
 void display_grid(Grid<string>& grid)
 {
-    for (int row = 0; row < grid.nRows; row++) {
-        for (int col = 0; col < grid.nCols; col++) {
+    for (int row = 0; row < grid.numRows(); row++) {
+        for (int col = 0; col < grid.numCols(); col++) {
             cout << grid[row][col];
         }
         cout << endl;
@@ -163,8 +163,8 @@ void update_grid(Grid<string>& grid, const bool wrapping, LifeGUI& gui)
 {
     Grid<string> grid_n = grid;
     int neighbors;
-    for (int row = 0; row < grid.nRows; row++) {
-        for (int col = 0; col < grid.nCols; col++) {
+    for (int row = 0; row < grid.numRows(); row++) {
+        for (int col = 0; col < grid.numCols(); col++) {
             neighbors = count_neighbors(grid, row, col, wrapping);
             switch (neighbors)
             {
@@ -210,8 +210,8 @@ int count_neighbors(Grid<string>& grid, int row, int col, const bool wrapping)
                     count++;
                 }
                 if (wrapping && !grid.inBounds(row + i, col + j)) {
-                    int new_row = (row + i + grid.nRows) % grid.nRows;
-                    int new_col = (col + j + grid.nCols) % grid.nCols;
+                    int new_row = (row + i + grid.numRows()) % grid.numRows();
+                    int new_col = (col + j + grid.numCols()) % grid.numCols();
                     if (grid[new_row][new_col].compare("X") == 0) {
                         count++;
                     }
