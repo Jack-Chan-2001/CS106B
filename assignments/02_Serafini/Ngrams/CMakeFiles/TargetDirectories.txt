@@ -1,4 +1,0 @@
-/home/jack/Documents/courses/cs106B/assignments/02_Serafini/Ngrams/CMakeFiles/stanford.dir
-/home/jack/Documents/courses/cs106B/assignments/02_Serafini/Ngrams/CMakeFiles/ngrams.dir
-/home/jack/Documents/courses/cs106B/assignments/02_Serafini/Ngrams/CMakeFiles/edit_cache.dir
-/home/jack/Documents/courses/cs106B/assignments/02_Serafini/Ngrams/CMakeFiles/rebuild_cache.dir

@@ -1,1 +1,0 @@
-/usr/bin/c++  -ldl -lpthread CMakeFiles/ngrams.dir/src/ngrams.cpp.o -o ngrams  libstanford.a -lpthread -ldl 

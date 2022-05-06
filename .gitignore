@@ -37,7 +37,7 @@ CS106/
 hello/
 StanfordCPPLib/
 
-assignments/
-!assignments/**/src/
-!assignments/**/res/
-!assignments/**/lib/
+assignments/*
+!assignments/**/src/*
+!assignments/**/res/*
+!assignments/**/lib/*
