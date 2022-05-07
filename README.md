@@ -12,6 +12,20 @@ This is a C++ programming course taught in Stanford University. I chose the cour
 
 
 
+## My solutions
+
+[assignment1: Life](https://github.com/Jack-Chan-2001/CS106B/tree/main/assignments/01_Life)
+
+[assignment2: Serafini](https://github.com/Jack-Chan-2001/CS106B/tree/main/assignments/02_Serafini)
+
+- [ ] [assignment3: Recursion](https://github.com/Jack-Chan-2001/CS106B/tree/main/assignments/03_Recursion)
+- [ ] assignment4: Boggle
+- [ ] assignment5: Patient Queue
+- [ ] assignment6: Huffman Encoding
+- [ ] assignment7: Trailblazer
+
+
+
 ## How to build personal workstation using tools other than Qt?
 
 This is [Stanford cpp library empty project](https://github.com/Jack-Chan-2001/CS106B/tree/main/hello), using cmake as build toolchain.
