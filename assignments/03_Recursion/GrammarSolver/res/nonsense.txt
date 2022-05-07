@@ -1,0 +1,11 @@
+foo::=X 
+bar::=A B C
+baz::=A qux D
+qux::=B|C
+mum::=I J K L M|E F G|XYZ|Q R STUV
+bruno::=bar|qux|mum
+borat::=t1 t2 t3|t4 nt5 t6|nt7 t8 nt9|t10
+nt5::=t5
+nt7::=t7a|t7b
+nt9::=t9a|t9b
+sacha::=bruno|borat|bar

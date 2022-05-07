@@ -1,0 +1,10 @@
+ADJEC::=huge|tiny|blue|super|buggy|terrible|boring|hungry|furious|smelly
+PNOUN::=Alyssa|Stephanie|Allison|Jason|Marisa|Stefanie|Jay|Kelly|Lisa|Roy|Eric|Angela|Kasey|Steve|Kim|Michael|David|Jordan|Gabe|Rob|Jared
+TVERB::=kicked|rebooted|destroyed|built|ate
+DET::=the|a
+NOUN::=dog|cat|girl|store|second cousin|great grandpa|child|television|homework|Java program
+VERBP::=TVERB NOUNP|IVERB
+SENT::=NOUNP VERBP
+ADJP::=ADJEC|ADJEC ADJP
+IVERB::=died|collapsed|laughed|wept|graded
+NOUNP::=DET ADJP NOUN|PNOUN

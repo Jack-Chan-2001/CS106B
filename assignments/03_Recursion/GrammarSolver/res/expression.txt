@@ -1,0 +1,5 @@
+E::=T|E OP T
+T::=x|y|42|0|1|92|( E )|F1 ( E )|- T|F2 ( E , E )
+OP::=+|-|*|%|/
+F1::=sin|cos|tan|sqrt|abs
+F2::=max|min|pow

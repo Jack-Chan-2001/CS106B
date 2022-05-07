@@ -26,15 +26,21 @@ compile_commands.json
 CTestTestfile.cmake
 _deps
 
+# Makefile
+Makefile
+
 # visual sdudio
 **/.vscode
 
 .DS_Store
+spl.jar
 
 BlankProject/
 CS106/
 hello/
 StanfordCPPLib/
 
-assignments/
-!src/
+assignments/**/lib
+assignments/**/output
+
+
