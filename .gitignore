@@ -29,7 +29,6 @@ _deps
 # visual sdudio
 **/.vscode
 
-*.zip
 .DS_Store
 
 BlankProject/
@@ -38,6 +37,4 @@ hello/
 StanfordCPPLib/
 
 assignments/
-!assignments/**/src
-!assignments/**/res
-!assignments/**/lib
+!src/
