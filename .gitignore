@@ -13,6 +13,7 @@
 # Qt
 *.pro.user
 *.pro.user.*
+*Debug/
 
 # cmake
 CMakeLists.txt.user
@@ -39,6 +40,7 @@ BlankProject/
 CS106/
 hello/
 StanfordCPPLib/
+hello_Qt/
 
 assignments/**/lib
 assignments/**/output

@@ -10,15 +10,15 @@ This is a C++ programming course taught in Stanford University. I chose the cour
 
 [Stanford lib docs](https://web.stanford.edu/dept/cs_edu/resources/cslib_docs/)
 
-
+[Stanford C++ Libraries docs](http://www.martinstepp.com/cppdoc/)
 
 ## My solutions
 
-[assignment1: Life](https://github.com/Jack-Chan-2001/CS106B/tree/main/assignments/01_Life)
+[assignment1: Life](assignments/01_Life)
 
-[assignment2: Serafini](https://github.com/Jack-Chan-2001/CS106B/tree/main/assignments/02_Serafini)
+[assignment2: Serafini](assignments/02_Serafini)
 
-- [ ] [assignment3: Recursion](https://github.com/Jack-Chan-2001/CS106B/tree/main/assignments/03_Recursion)
+- [ ] [assignment3: Recursion](assignments/03_Recursion)
 - [ ] assignment4: Boggle
 - [ ] assignment5: Patient Queue
 - [ ] assignment6: Huffman Encoding

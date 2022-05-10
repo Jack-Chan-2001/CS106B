@@ -1,12 +1,3 @@
-/*
- * File: fractals.cpp
- * --------------------------
- * Name:
- * Section leader:
- * This file contains fractal problems for CS106B.
- */
-
-
 #include "fractals.h"
 #include <cmath>
 
@@ -27,8 +18,29 @@ const int BRANCH_COLOR = 0x8b7765; /* Color of all branches of recursive tree (l
  * @param size - The length of one side of the triangle.
  * @param order - The order of the fractal.
  */
+
+void drawEquilateralTriangle(GWindow& gw, double& x, double& y, double& size) {
+    gw.drawLine(x, y, x + size, y);
+    gw.drawLine(x, y, x + size / 2, y + size * sqrt(3) / 2);
+    gw.drawLine(x + size / 2, y + size * sqrt(3) / 2, x + size, y);
+
+}
+
 void drawSierpinskiTriangle(GWindow& gw, double x, double y, double size, int order) {
     // TODO: write this function
+    if (x < 0 || y < 0 || size < 0 || order < 0) {
+        throw("invalid input");
+    } else {
+        if (order == 1) {
+            // base case
+            drawEquilateralTriangle(gw, x, y, size);
+        } else {
+            // recursive case
+            drawSierpinskiTriangle(gw, x, y, size / 2, order - 1);
+            drawSierpinskiTriangle(gw, x + size / 2, y, size / 2, order - 1);
+            drawSierpinskiTriangle(gw, x + size / 4, y + size * sqrt(3) / 4, size / 2, order - 1);
+        }
+    }
 }
 
 /**
@@ -43,9 +55,33 @@ void drawSierpinskiTriangle(GWindow& gw, double x, double y, double size, int or
  * @param size - The length of one side of the bounding box.
  * @param order - The order of the fractal.
  */
+
+void drawTreeHelper(GWindow& gw, double x, double y, double size, int order, int angle) {
+    if (x < 0 || y < 0 || size < 0 || order < 0) {
+        throw("invalid input");
+    } else if (order != 0) {
+        // Set color
+        if (order == 1) {
+            gw.setColor(LEAF_COLOR);
+        } else {
+            gw.setColor(BRANCH_COLOR);
+        }
+
+        // Draw tree trunk and get the trunk's tip
+        GPoint tip = gw.drawPolarLine(x, y, size, angle);
+
+        // Draw branches
+        for (int newAngle = angle - 45; newAngle <= angle + 45; newAngle += 15) {
+            drawTreeHelper(gw, tip.getX(), tip.getY(), size / 2, order - 1, newAngle);
+        }
+    }
+}
+
 void drawTree(GWindow& gw, double x, double y, double size, int order) {
     // TODO: write this function
+    drawTreeHelper(gw, x + size / 2, y + size, size / 2, order, 90);
 }
+
 
 /**
  * Draws a Mandelbrot Set in the graphical window give, with maxIterations
@@ -75,7 +111,18 @@ void mandelbrotSet(GWindow& gw, double minX, double incX,
     gw.add(&image);
     Grid<int> pixels = image.toGrid(); // Convert image to grid
 
-    // TODO: Put your Mandelbrot Set code here
+    for (int r = 0; r < pixels.numRows(); r++) { //painting the image
+        for (int c = 0; c < pixels.numCols(); c++) {
+            int numIterations = mandelbrotSetIterations(Complex(minX + c * incX, minY + r * incY), 200);
+            if (color != 0) {
+                if (numIterations == maxIterations) {
+                    pixels[r][c] = color;
+                }
+            } else {
+                pixels[r][c] = palette[numIterations % palette.size()];
+            }
+        }
+    }
 
     image.fromGrid(pixels); // Converts and puts the grid back into the image
 }
@@ -92,7 +139,7 @@ void mandelbrotSet(GWindow& gw, double minX, double incX,
  */
 int mandelbrotSetIterations(Complex c, int maxIterations) {
     // TODO: Write this function
-    return 0; // Only here to make this compile
+    return mandelbrotSetIterations(Complex(0, 0), c, maxIterations);
 }
 /**
  * An iteration of the Mandelbrot Set recursive formula with given values z and c, to
@@ -105,9 +152,17 @@ int mandelbrotSetIterations(Complex c, int maxIterations) {
  * @param remainingIterations - The remaining number of iterations to run recursive step
  * @return number of iterations needed to determine if c is unbounded
  */
+
+int mandelbrotSetIterationsHelper(Complex z, Complex c, int remainingIterations, int & maxIterations) {
+    if ((z * z + c).abs() >= 4 || remainingIterations == 0) { //base case (the value diverges or c is succesfully
+        return maxIterations - remainingIterations;           // determined as a mandelbrot set number)
+    } else { //recursive step (passing through the next recursively defined stage of the function)
+        return mandelbrotSetIterationsHelper(z * z + c, c, remainingIterations - 1, maxIterations);
+    }
+}
+
 int mandelbrotSetIterations(Complex z, Complex c, int remainingIterations) {
-    // TODO: write this function
-    return 0; // Only here to make this compile
+    return mandelbrotSetIterationsHelper(z, c, remainingIterations, remainingIterations);
 }
 
 // Helper function to set the palette
@@ -127,8 +182,8 @@ Vector<int> setPalette() {
 
     // The following is the "Hope" palette:
     // http://www.colourlovers.com/palette/524048/Hope
-    string colorSt =  "#04182B,#5A8C8C,#F2D99D,#738585,#AB1111,#04182B,#5A8C8C,#F2D99D";
-    Vector<string>colorsStrVec = stringSplit(colorSt,",");
+    string colorSt = "#04182B,#5A8C8C,#F2D99D,#738585,#AB1111,#04182B,#5A8C8C,#F2D99D";
+    Vector<string>colorsStrVec = stringSplit(colorSt, ",");
     for (string color : colorsStrVec) {
         colors.add(convertColorToRGB(trim(color)));
     }

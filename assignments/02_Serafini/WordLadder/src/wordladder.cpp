@@ -35,15 +35,13 @@ int main() {
     return 0;
 }
 
-void welcome()
-{
+void welcome() {
     cout << "Welcome to CS 106B Word Ladder.\n"
         << "Please give me two English words, and I will change the\n"
         << "first into the second by changing one letter at a time.\n\n";
 }
 
-void promptDictionary(fstream& inFile, string& filename, Lexicon& dictionary)
-{
+void promptDictionary(fstream& inFile, string& filename, Lexicon& dictionary) {
     string dirPath("res/");
     do {
         filename = getLine("Dictionary file name?");
@@ -57,8 +55,7 @@ void promptDictionary(fstream& inFile, string& filename, Lexicon& dictionary)
     dictionary = Lexicon(inFile);
 }
 
-bool promptWords(string& startWord, string& endWord)
-{
+bool promptWords(string& startWord, string& endWord) {
     cout << "\nWord #1 (or Enter to quit): ";
     getline(cin, startWord);
     if (startWord.empty()) {
@@ -77,8 +74,7 @@ bool promptWords(string& startWord, string& endWord)
     return true;
 }
 
-bool isValidInput(const string& startWord, const string& endWord, const Lexicon& dictionary)
-{
+bool isValidInput(const string& startWord, const string& endWord, const Lexicon& dictionary) {
     if (startWord.length() != endWord.length()) {
         cout << "The two words must be the same length.\n";
         return false;
@@ -92,8 +88,7 @@ bool isValidInput(const string& startWord, const string& endWord, const Lexicon&
     return true;
 }
 
-void findWord(const string& startWord, const string& endWord, const Lexicon& dictionary)
-{
+void findWord(const string& startWord, const string& endWord, const Lexicon& dictionary) {
     if (!isValidInput(startWord, endWord, dictionary)) return;
 
     Stack<string> ladder{ startWord };
@@ -128,8 +123,7 @@ void findWord(const string& startWord, const string& endWord, const Lexicon& dic
     cout << "No word ladder found from " << endWord << " back to " << startWord << endl;
 }
 
-HashSet<string> findNeighbors(const string& word, const Lexicon& dictionary)
-{
+HashSet<string> findNeighbors(const string& word, const Lexicon& dictionary) {
     HashSet<string> neighbors;
     string tmp = word;
     for (int i = 0; i < word.length(); i++) {
