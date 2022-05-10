@@ -19,9 +19,9 @@
 
 #include <iostream>
 #include <string>
-#include "gbufferedimage.h"
-#include "gwindow.h"
-#include "vector.h"
+#include "graphics/gbufferedimage.h"
+#include "graphics/gwindow.h"
+#include "collections/vector.h"
 
 // function prototype declarations
 // (If you want to declare your own helper function prototypes, do that near

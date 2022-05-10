@@ -19,10 +19,9 @@
 #include <iomanip>
 #include <iostream>
 #include <string>
-#include "console.h"
-#include "filelib.h"
-#include "simpio.h"
-#include "strlib.h"
+#include "io/filelib.h"
+#include "io/simpio.h"
+#include "util/strlib.h"
 #include "grammarsolver.h"
 
 int main() {
