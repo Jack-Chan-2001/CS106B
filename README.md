@@ -18,8 +18,9 @@ This is a C++ programming course taught in Stanford University. I chose the cour
 
 [assignment2: Serafini](assignments/02_Serafini)
 
-- [ ] [assignment3: Recursion](assignments/03_Recursion)
-- [ ] assignment4: Boggle
+[assignment3: Recursion](assignments/03_Recursion)
+
+- [ ] [assignment4: Boggle](assignments/04_Boggle)
 - [ ] assignment5: Patient Queue
 - [ ] assignment6: Huffman Encoding
 - [ ] assignment7: Trailblazer
