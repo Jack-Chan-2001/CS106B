@@ -20,8 +20,10 @@ This is a C++ programming course taught in Stanford University. I chose the cour
 
 [assignment3: Recursion](assignments/03_Recursion)
 
-- [ ] [assignment4: Boggle](assignments/04_Boggle)
-- [ ] assignment5: Patient Queue
+[assignment4: Boggle](assignments/04_Boggle)
+
+- [ ] [assignment5: Patient Queue](assignments/05_Patient_Queue)
+
 - [ ] assignment6: Huffman Encoding
 - [ ] assignment7: Trailblazer
 
