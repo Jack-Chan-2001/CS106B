@@ -1,5 +1,6 @@
 /**
  * This file contains methods and properies to perform Boggle game.
+ * This is adapted from a post repo by afeacer.
  */
 
 #include "Boggle.h"

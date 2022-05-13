@@ -20,14 +20,15 @@ file(GLOB stanford_files
         )
 add_library(stanford ${stanford_files})
 
-set(hello_SOURCES src/main.cpp)
+aux_source_directory(src hello_SOURCES)
+
 link_libraries(stanford)
 add_executable(hello ${hello_SOURCES})
 
 target_link_libraries(${PROJECT_NAME}
-PUBLIC ${Boost_STACKTRACE_BASIC_LIBRARY}
-PUBLIC ${Boost_STACKTRACE_BACKTRACE_LIBRARY}
-PUBLIC ${Boost_STACKTRACE_ADDR2LINE_LIBRARY}
-PUBLIC ${Boost_STACKTRACE_NOOP_LIBRARY}
-PUBLIC pthread dl
+        PUBLIC ${Boost_STACKTRACE_BASIC_LIBRARY}
+        PUBLIC ${Boost_STACKTRACE_BACKTRACE_LIBRARY}
+        PUBLIC ${Boost_STACKTRACE_ADDR2LINE_LIBRARY}
+        PUBLIC ${Boost_STACKTRACE_NOOP_LIBRARY}
+        PUBLIC pthread dl
 )

@@ -1,6 +1,6 @@
 /**
  * Boogle.h containing Boggle class
- * 
+ * This is adapted from a post by afeacer
  */
 
 #ifndef _boggle_h

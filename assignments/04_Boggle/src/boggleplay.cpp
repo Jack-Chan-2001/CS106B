@@ -1,3 +1,8 @@
+/**
+ * This is adapted from a post by afeacer
+ */
+
+
 #include "lexicon.h"
 #include "simpio.h"
 #include "Boggle.h"
