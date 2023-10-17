@@ -31,7 +31,7 @@ This is a C++ programming course taught in Stanford University. I chose the cour
 
 ## How to build personal workstation using tools other than Qt?
 
-This is [Stanford cpp library empty project](https://github.com/Jack-Chan-2001/CS106B/tree/main/hello), using cmake as build toolchain.
+This is [Stanford cpp library empty project](https://github.com/Jack-Chan-2001/CS106B/tree/main/hello), using **cmake** as build toolchain.
 
 
 
