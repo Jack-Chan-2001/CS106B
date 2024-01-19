@@ -14,6 +14,9 @@ This is a C++ programming course taught in Stanford University. I chose the cour
 
 ## My solutions
 
+
+### Completed
+
 [assignment1: Life](assignments/01_Life)
 
 [assignment2: Serafini](assignments/02_Serafini)
@@ -21,6 +24,8 @@ This is a C++ programming course taught in Stanford University. I chose the cour
 [assignment3: Recursion](assignments/03_Recursion)
 
 [assignment4: Boggle](assignments/04_Boggle)
+
+### To be down
 
 - [ ] [assignment5: Patient Queue](assignments/05_Patient_Queue)
 
